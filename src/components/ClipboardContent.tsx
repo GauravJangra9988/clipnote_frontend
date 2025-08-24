@@ -54,7 +54,7 @@ export const ClipboardContent = ({
 
     const deleteClip = async () => {
     try {
-      const res = await fetch("http://localhost:8080/delete", {
+      const res = await fetch("http://56.228.21.202:8080/delete", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -16,7 +16,7 @@ export const ClipNote = () => {
 useEffect(() => {
   const fetchClipboardItems = async () => {
     try {
-      const res = await fetch("http://localhost:8080/clips", {
+      const res = await fetch("http://56.228.21.202:8080/clips", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

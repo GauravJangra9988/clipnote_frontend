@@ -28,7 +28,7 @@ export function SignupForm({ className, onSuccess, ...props }: SignupFormProps) 
     setError(null)
 
     try {
-      const res = await fetch("http://localhost:8080/register", {
+      const res = await fetch("http://56.228.21.202:8080/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

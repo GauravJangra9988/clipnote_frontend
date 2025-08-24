@@ -59,7 +59,7 @@ export const ClipboardSidebar = ({
   const navigate = useNavigate()
 
   const onClickLogout = async() =>{
-    const res = await fetch("http://localhost:8080/logout",{
+    const res = await fetch("http://56.228.21.202:8080/logout",{
       method: "POST",
       headers: {
         "Content-Type": "application/json" 
