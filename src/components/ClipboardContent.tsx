@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast"
 import { cn } from "@/lib/utils"
 import { ClipboardItem } from "@/types/clipboard"
 import { format } from "date-fns"
+const URL = import.meta.env.VITE_API_URL
 
 interface ClipboardContentProps {
   item?: ClipboardItem
@@ -54,7 +55,7 @@ export const ClipboardContent = ({
 
     const deleteClip = async () => {
     try {
-      const res = await fetch("http://56.228.21.202:8080/delete", {
+      const res = await fetch(`${URL}/delete`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

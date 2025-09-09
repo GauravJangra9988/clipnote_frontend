@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: "Amsterdam";
+  src: url("/src/assets/fonts/Amsterdam.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

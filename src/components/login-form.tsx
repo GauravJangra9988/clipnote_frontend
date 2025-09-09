@@ -12,6 +12,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
+const URL = import.meta.env.VITE_API_URL
+
+
 export function LoginForm({
   className,
   ...props
@@ -29,13 +32,13 @@ export function LoginForm({
     setError(null)
 
     try {
-      const res = await fetch("http://56.228.21.202:8080/login", {
+      const res = await fetch(`${URL}/login`, {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
-        credentials: "include"
       })
 
       if (!res.ok) {
@@ -46,7 +49,7 @@ export function LoginForm({
       const data = await res.json()
       console.log("Login successful:", data)
 
-      navigate("/")
+      navigate("/home")
 
     } catch (err) {
       setError(err.message)

@@ -7,6 +7,8 @@ import { ClipboardItem, ContentType } from "@/types/clipboard";
 import { format } from "date-fns";
 import { LiveIndicator } from "./ui/livePulse";
 import { useNavigate } from "react-router-dom";
+import dotenv from 'dotenv'
+const URL = import.meta.env.VITE_API_URL
 
 
 
@@ -59,7 +61,7 @@ export const ClipboardSidebar = ({
   const navigate = useNavigate()
 
   const onClickLogout = async() =>{
-    const res = await fetch("http://56.228.21.202:8080/logout",{
+    const res = await fetch(`${URL}/logout`,{
       method: "POST",
       headers: {
         "Content-Type": "application/json" 

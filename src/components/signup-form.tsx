@@ -10,6 +10,9 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import dotenv from 'dotenv'
+const URL = import.meta.env.VITE_API_URL
+
 
 interface SignupFormProps extends React.ComponentPropsWithoutRef<"div"> {
   onSuccess?: () => void
@@ -28,7 +31,7 @@ export function SignupForm({ className, onSuccess, ...props }: SignupFormProps) 
     setError(null)
 
     try {
-      const res = await fetch("http://56.228.21.202:8080/register", {
+      const res = await fetch(`${URL}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

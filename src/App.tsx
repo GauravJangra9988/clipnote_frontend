@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth"
-import PrivateRoute from "./hooks/loginStatus";
+import {PrivateRoute,  PrivateRouteHome } from "./hooks/loginStatus";
+import Clipnote_landing from "./pages/Clipnote_landing";
+import { ClipNote } from "./components/ClipNote";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +19,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PrivateRoute><Index /></PrivateRoute>} />
+          <Route path="/" element={<PrivateRoute><Clipnote_landing/></PrivateRoute>} />
+          <Route path="/home" element={<PrivateRouteHome><ClipNote/></PrivateRouteHome>}></Route>
           <Route path="/auth" element={<Auth/>}/>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

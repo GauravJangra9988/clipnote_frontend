@@ -5,6 +5,9 @@ import {ContentType } from "@/types/clipboard";
 import { useToast } from "@/hooks/use-toast";
 import { ClipboardItem, ApiClipboardItem, mapApiToClipboardItem } from "@/types/clipboard";
 
+
+const URL = import.meta.env.VITE_API_URL
+
 export const ClipNote = () => {
   const [items, setItems] = useState<ClipboardItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<ClipboardItem | undefined>();
@@ -16,7 +19,7 @@ export const ClipNote = () => {
 useEffect(() => {
   const fetchClipboardItems = async () => {
     try {
-      const res = await fetch("http://56.228.21.202:8080/clips", {
+      const res = await fetch(`${URL}/clips`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
