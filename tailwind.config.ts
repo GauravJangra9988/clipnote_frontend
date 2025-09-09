@@ -20,7 +20,7 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat"],
-        amsterdam: ["Amsterdam", "cursive"],
+        amsterdam: ["Amsterdam", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

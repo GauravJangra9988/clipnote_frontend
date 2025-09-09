@@ -1,24 +1,18 @@
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-
-
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Clipnote_landing = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/auth");
+  };
 
-
-const handleLogin = () =>{
-    navigate("/auth")
-}
-
-const handleAccessHome = () =>{
-    navigate("/auth")
-}
-
+  const handleAccessHome = () => {
+    navigate("/auth");
+  };
 
   return (
     <div className="relative bg-black min-h-screen text-green-400  select-none">
@@ -42,19 +36,14 @@ const handleAccessHome = () =>{
 
         <h1 className="text-white text-6xl font-bold font-montserrat leading-tight">
           Still Worrying of loosing your <br />
-          <span
-            className="text-green-400 "
-            
-          >
-            important clipboard history?
-          </span>
+          <span className="text-green-400 ">important clipboard history?</span>
         </h1>
-        <p className="text-gray-400 font-inter text-2xl mt-4">
+        <p className="text-gray-400 text-2xl mt-4 font-montserrat tracking-tighter">
           Meet{" "}
-          <span className="text-white font-amsterdam font-semibold text-3xl hover:text-green-400 transition-all ease-linear">
+          <span className="text-white font-amsterdam text-2xl hover:text-green-400 transition-all ease-linear">
             ClipNote{" "}
           </span>{" "}
-          - your smart clipboard companion that saves everything you copy.
+        your smart clipboard companion that saves everything you copy.
         </p>
 
         <div className="flex flex-row gap-8 mt-12 font-montserrat">
@@ -89,6 +78,6 @@ const handleAccessHome = () =>{
       </section>
     </div>
   );
-}
+};
 
-export default Clipnote_landing
+export default Clipnote_landing;

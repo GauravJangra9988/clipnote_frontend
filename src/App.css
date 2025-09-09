@@ -43,7 +43,8 @@
 
 @font-face {
   font-family: "Amsterdam";
-  src: url("/src/assets/fonts/Amsterdam.ttf") format("truetype");
+  src: url("/fonts/Amsterdam.woff2") format("woff2"),
+       url("/fonts/Amsterdam.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
