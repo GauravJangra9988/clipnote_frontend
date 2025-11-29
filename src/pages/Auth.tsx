@@ -23,7 +23,7 @@ export default function AuthPage() {
 
         <div className="flex justify-center">
           <Button
-            variant="ghost"
+            variant="outline"
             onClick={() =>
               setMode(mode === "login" ? "signup" : "login")
             }

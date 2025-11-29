@@ -25,8 +25,8 @@ export const ClipboardContent = ({
     return (
       <div className="flex-1 flex items-center justify-center bg-background">
         <div className="text-center max-w-md">
-          <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-            <Copy className="w-8 h-8 text-muted-foreground" />
+          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <Copy className="w-8 h-8 text-black" />
           </div>
           <h3 className="text-lg font-semibold mb-2">Select a clipboard item</h3>
           <p className="text-muted-foreground text-sm">

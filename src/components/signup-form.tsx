@@ -61,7 +61,7 @@ export function SignupForm({ className, onSuccess, ...props }: SignupFormProps) 
         <CardHeader>
           <CardTitle className="text-2xl">Sign Up</CardTitle>
           <CardDescription>
-            Create an account using your username, email, and password
+            Create an account
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -73,7 +73,7 @@ export function SignupForm({ className, onSuccess, ...props }: SignupFormProps) 
                 <Input
                   id="username"
                   type="text"
-                  placeholder="yourname"
+                  placeholder=""
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
@@ -86,7 +86,7 @@ export function SignupForm({ className, onSuccess, ...props }: SignupFormProps) 
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder=""
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required

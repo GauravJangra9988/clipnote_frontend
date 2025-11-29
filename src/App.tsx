@@ -22,7 +22,9 @@ const App = () => (
           <Route path="/" element={<PrivateRoute><Clipnote_landing/></PrivateRoute>} />
           <Route path="/home" element={<PrivateRouteHome><ClipNote/></PrivateRouteHome>}></Route>
           <Route path="/auth" element={<Auth/>}/>
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* <Route path="/" element={<Clipnote_landing/>} />
+          <Route path="/home" element={<ClipNote/>}></Route>
+          <Route path="/auth" element={<Auth/>}/> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
